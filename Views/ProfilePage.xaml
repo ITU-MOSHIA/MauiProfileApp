@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiProfileApp.Views.ProfilePage"
+             Title="Profile"
+             BackgroundColor="Gold">
+    <!-- Light background for better contrast -->
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <!-- Profile Picture -->
+            <Frame CornerRadius="75" HasShadow="True" BackgroundColor="HotPink" Padding="5" 
+                   HorizontalOptions="Center" VerticalOptions="Center">
+                <Image x:Name="ProfileImage" HeightRequest="150" WidthRequest="150" Aspect="AspectFill" 
+                       HorizontalOptions="Center" />
+            </Frame>
+            <Button Text="Choose Picture" Clicked="OnChoosePictureClicked" 
+                    BackgroundColor="#FF6F61" TextColor="Black" Padding="10" Margin="0,20"/>
+
+            <!-- Name Entry (Wrapped in Frame) -->
+            <Label Text="Name" FontSize="18" TextColor="#333333" HorizontalOptions="Start" />
+            <Frame BorderColor="Black" BackgroundColor="HotPink" CornerRadius="10" Padding="0,5" 
+                   Margin="0,10">
+                <Entry x:Name="NameEntry" Placeholder="Enter your name" TextColor="#333333"
+                       BackgroundColor="HotPink" HeightRequest="50" HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+            <!-- Surname Entry (Wrapped in Frame) -->
+            <Label Text="Surname" FontSize="18" TextColor="#333333" HorizontalOptions="Start" />
+            <Frame BorderColor="Black" BackgroundColor="HotPink" CornerRadius="10" Padding="0,5" 
+                   Margin="0,10">
+                <Entry x:Name="SurnameEntry" Placeholder="Enter your surname" TextColor="#333333"
+                       BackgroundColor="HotPink" HeightRequest="50" HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+            <!-- Email Entry (Wrapped in Frame) -->
+            <Label Text="Email" FontSize="18" TextColor="#333333" HorizontalOptions="Start" />
+            <Frame BorderColor="Black" BackgroundColor="HotPink" CornerRadius="10" Padding="0,5" 
+                   Margin="0,10">
+                <Entry x:Name="EmailEntry" Placeholder="Enter your email" Keyboard="Email" TextColor="#333333"
+                       BackgroundColor="HotPink" HeightRequest="50" HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+            <!-- Bio Entry (Wrapped in Frame) -->
+            <Label Text="Bio" FontSize="18" TextColor="#333333" HorizontalOptions="Start" />
+            <Frame BorderColor="Black" BackgroundColor="HotPink" CornerRadius="10" Padding="0,5" 
+                   Margin="0,10">
+                <Editor x:Name="BioEditor" Placeholder="Write something about yourself..." HeightRequest="120"
+                        TextColor="#333333" BackgroundColor="HotPink" HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+            <!-- Save Button (Wrapped in Frame) -->
+            <Frame BorderColor="Black" BackgroundColor="HotPink" CornerRadius="25" Padding="0" Margin="0,10">
+                <Button Text="Save Profile" Clicked="OnSaveClicked" BackgroundColor="#4CAF50" 
+                        TextColor="Black" FontSize="16" Padding="10" 
+                        VerticalOptions="End" HorizontalOptions="FillAndExpand" />
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
